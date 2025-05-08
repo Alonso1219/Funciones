@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: #f0f0f0;
+        }
+
+        .contador {
+            font-size: 60px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        button {
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #incrementar {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #disminuir {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #reiniciar {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="contador" id="valor">0</div>
+    <button id="incrementar">Aumentar</button>
+    <button id="disminuir">Disminuir</button>
+    <button id="reiniciar">Reiniciar</button>
+
+    <script src="/JS/P01.JS"></script>
+</body>
+</html>

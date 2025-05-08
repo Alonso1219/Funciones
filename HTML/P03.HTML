@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Aritméticas</title>
+    <link rel="stylesheet" href="/CSS/P03.CSS">
+</head>
+<body>
+    <div id="contenedor">
+        <header id="encabezado" style="text-align: center;">
+            <h2>Prácticas JavaScript</h2>
+            <h3>Operaciones Aritméticas</h3>
+        </header>
+
+        <section class="Tarjeta">
+            <img class="img" src="/IMG/imgmate.avif" alt="Imagen de matemáticas">
+            
+            <select id="opciones">
+                <option value="1">Suma</option>
+                <option value="2">Resta</option>   
+                <option value="3">Multiplicación</option>
+                <option value="4">División</option> 
+            </select>
+            
+            <p id="resultado" class="descripcion">Resultado: </p>
+            
+            <input type="number" name="txtNum1" id="txtNum1" placeholder="Número 1"> <br>
+            <label id="lblOperador" for="opciones">+</label> <br>
+            <input type="number" name="txtNum2" id="txtNum2" placeholder="Número 2"> <br>
+            
+            <button id="btnCalcular">Realizar Operación</button>
+        </section>
+    </div>
+
+    <script src="/JS/P03.JS"></script>
+</body>
+</html>

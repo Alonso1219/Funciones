@@ -1,0 +1,94 @@
+/* Fondo general con gradiente */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #00c9ff, #92fe9d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+#contenedor {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    text-align: center;
+}
+
+/* Encabezados */
+#encabezado h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #222;
+}
+
+#encabezado h3 {
+    margin-top: 5px;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Tarjeta del formulario */
+.Tarjeta {
+    margin-top: 20px;
+}
+
+.img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+/* Select y inputs */
+select, input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 2px solid #00c9ff;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+select:focus, input:focus {
+    border-color: #007acc;
+    background-color: #f0faff;
+}
+
+/* Botón */
+button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+/* Etiqueta del operador */
+#lblOperador {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Resultado */
+#resultado {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #444;
+}
