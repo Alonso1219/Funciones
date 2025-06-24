@@ -1,11 +1,10 @@
 pages:
   stage: deploy
   script:
-    - mkdir .public
-    - cp -r HTML/* .public
-    - mv .public public
+    - mkdir -p public
+    - cp -r HTML/* public/  # Esto copia recursivamente TODO (HTML, CSS, JS, imágenes)
   artifacts:
     paths:
       - public
   only:
-    - master  # o 'main', según el nombre de tu rama
+    - main

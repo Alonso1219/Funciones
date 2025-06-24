@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 01 JavaScript</title>
+    <style>
+        /* Estilos CSS integrados */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00c9ff, #92fe9d);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal */
+        section {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+        }
+
+        /* Párrafo interactivo */
+        #parrafo {
+            padding: 20px;
+            border: 2px dashed #00bcd4;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+        /* Botones */
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #007acc;
+            color: white;
+            font-size: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        /* Input de texto */
+        input[type="text"] {
+            padding: 10px;
+            margin-left: 10px;
+            width: 200px;
+            border-radius: 8px;
+            border: 2px solid #00bcd4;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007acc;
+        }
+
+        /* Línea separadora */
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Estilos adicionales del head */
+        header {
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Práctica 01 JavaScript</h2>
+    </header>
+
+    <section>
+        <!-- Se establece un ID para manejarlo como un objeto -->
+        <p id="parrafo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dolorum iure nam quia nulla aspernatur. Vitae sit temporibus odit ad nihil qui nam in ipsam recusandae assumenda, culpa repellat expedita.
+        </p>
+        <hr>
+
+        <p>
+            <button id="btnMay">Mayúscula</button>
+            <button id="btnMin">Minúscula</button>
+
+            <label for="txtTexto">Agregar Texto</label>
+            <input type="text" id="txtTexto">
+            <button id="btnAgregar">Agregar</button>
+        </p>
+    </section>
+
+    <!-- JavaScript integrado -->
+    <script>
+        // Paso 1: Obtener los objetos en variables en JavaScript
+        const parrafo = document.getElementById('parrafo');
+        const btnMay = document.getElementById('btnMay');
+        const btnMin = document.getElementById('btnMin');
+        const txtTexto = document.getElementById('txtTexto');
+        const btnAgregar = document.getElementById('btnAgregar');
+
+        // Variables globales para almacenar estilo original
+        var col = parrafo.style.color;
+        var tm = parrafo.style.fontSize;
+        var cf = parrafo.style.background;
+
+        // PASO 2: Declaración de funciones para modificar atributos
+        function cambiar() {
+            parrafo.style.color = 'red';
+            parrafo.style.fontSize = '20px';
+            parrafo.style.background = 'yellow';
+        }
+
+        function normal() {
+            parrafo.style.color = col;
+            parrafo.style.fontSize = tm;
+            parrafo.style.background = cf;
+        }
+
+        function mayusculas() {
+            parrafo.textContent = parrafo.textContent.toUpperCase();
+        }
+
+        function minusculas() {
+            parrafo.textContent = parrafo.textContent.toLowerCase();
+        }
+
+        function agregar() {
+            let txt = txtTexto.value;
+            parrafo.textContent += " " + txt;
+            txtTexto.value = ''; // Limpia el input después de agregar
+        }
+
+        // PASO 4: Asociar los eventos a las funciones
+        document.addEventListener('DOMContentLoaded', function() {
+            parrafo.addEventListener('mouseover', cambiar);
+            parrafo.addEventListener('mouseout', normal);
+            btnMay.addEventListener('click', mayusculas);
+            btnMin.addEventListener('click', minusculas);
+            btnAgregar.addEventListener('click', agregar);
+        });
+    </script>
+</body>
+</html>
